@@ -15,10 +15,7 @@ app.post('/', (req, res) => {
 
   let data = {
     response_type: 'in_channel',
-    text: [
-      'Today, my friend, you are a Winner',
-      'Quit whining, Whiner',
-    ],
+    text: 'Today, my friend, you are a Winner',
   };
 
   res.json(data);
