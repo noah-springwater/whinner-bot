@@ -16,15 +16,18 @@ const server = app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-  res.send("hello");
+  res.send("Whinners Slack Bot");
 });
+
+let responses = ['Today, my friend, you are a Winner', 'Quit Whining, Whiner'];
 
 app.post('/', (req, res) => {
   let text = req.body.text;
 
+  let randomResponse = Math.floor(Math.random()*responses.length);
   let data = {
     response_type: 'in_channel',
-    text: 'Today, my friend, you are a Winner',
+    text: randomResponse,
   };
 
   res.json(data);
