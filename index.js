@@ -24,7 +24,7 @@ let responses = ['Today, my friend, you are a Winner', 'Quit Whining, Whiner'];
 app.post('/', (req, res) => {
   let text = req.body.text;
 
-  let randomResponse = Math.floor(Math.random()*responses.length);
+  let randomResponse = responses[Math.floor(Math.random()*responses.length)];
   let data = {
     response_type: 'in_channel',
     text: randomResponse,
