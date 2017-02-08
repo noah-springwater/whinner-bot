@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT;
 
-const server = app.listen(8080, () => {
+const server = app.listen(PORT, () => {
   console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
 });
 
