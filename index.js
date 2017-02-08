@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   res.send("Whinners Slack Bot");
 });
 
-let responses = ['Today, my friend, you are a Winner', 'Quit Whining, Whiner'];
+let responses = ['Today, my friend, you are a Winner', 'Quit Whining, Whiner', 'Pshhh...L7 weinie!'];
 
 app.post('/', (req, res) => {
   let text = req.body.text;
