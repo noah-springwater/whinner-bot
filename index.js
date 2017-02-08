@@ -15,6 +15,10 @@ const server = app.listen(8080, () => {
   console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
 });
 
+app.get('/', (req, res) => {
+  res.send("hello")
+});
+
 app.post('/', (req, res) => {
   let text = req.body.text;
 
